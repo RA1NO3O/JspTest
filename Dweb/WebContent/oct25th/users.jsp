@@ -2,6 +2,9 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
+String username = "张三";
+String password = "123456";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -29,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <BR>
     <BR>
     <BR>
-         用户名：<%= %><br>
-         密码：<%= %><br>
+         用户名：<%=username %><br>
+         密码：<%=password %><br>
   </body>
 </html>

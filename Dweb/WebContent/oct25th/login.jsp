@@ -2,6 +2,7 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -24,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <h1>用户登录</h1>
     <hr>
     
-    <form name="loginForm" action="Oct24th/dologin.jsp" method="post">
+    <form name="loginForm" action="oct25th/dologin.jsp" method="post">
        <table>
          <tr>
            <td>用户名：</td>
@@ -35,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            <td><input type="password" name="password" value="" /></td>
          </tr>
          <tr>
-           <td colspan="2"><input type="checkbox" name="isUseCookie" checked="checked"/>十天内记住我的登录状态</td>
+           <td colspan="2"><input type="checkbox" name="isUseCookie" checked="checked" value="a1"/>十天内记住我的登录状态</td>
          </tr>
          <tr>
            <td colspan="2" align="center"><input type="submit" value="登录"/><input type="reset" value="取消"/></td>
