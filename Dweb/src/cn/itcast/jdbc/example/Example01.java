@@ -2,7 +2,6 @@ package cn.itcast.jdbc.example;
 import java.sql.*;
 
 public class Example01 {
-
 	public static void main(String[] args) throws SQLException{
 		Statement stmt = null;
 		ResultSet rs = null;
