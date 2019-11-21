@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	import="com.jkxy.model.userTable"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,17 +8,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:useBean id="user" class="cn.itcast.jdbc.example.userTable"></jsp:useBean>
-	<jsp:useBean id="userservice" class="com.jdbc.service.Userservice"></jsp:useBean>
-	<jsp:setProperty property="*" name="user"/>
+	<jsp:useBean id="user" class="com.jkxy.model.userTable"></jsp:useBean>
+	<jsp:useBean id="userservice" class="com.jkxy.service.Userservice"></jsp:useBean>
+	<jsp:setProperty property="*" name="user" />
 	<%
 		//user.setUsername("aa");
 		out.print(user.getUsername());
 		out.print(user.getPassword());
 		if(userservice.valiUser(user))
-			out.print("success");
+			{
+			session.setAttribute("user",user);
+			%>
+			<jsp:forward page="main.jsp"></jsp:forward>
+	<%
+			}
 		else
-			out.print("error");
+		{%>
+		<jsp:forward page="index.jsp"></jsp:forward>
+<%
+		}
 	%>
 </body>
 </html>
