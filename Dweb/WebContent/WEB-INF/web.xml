@@ -12,10 +12,28 @@
   <servlet>
     <description></description>
     <servlet-name>ts01</servlet-name>
-    <servlet-class>cn.itcast.servlet.TestServlet01</servlet-class>
+    <servlet-class>cn.itcast.chapter04.response.ChineseServlet</servlet-class>
+  </servlet>
+    <servlet>
+    <description></description>
+    <servlet-name>ts02</servlet-name>
+    <servlet-class>cn.itcast.chapter04.response.RefreshServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description></description>
+    <servlet-name>ts03</servlet-name>
+    <servlet-class>cn.itcast.chapter04.response.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ts01</servlet-name>
     <url-pattern>/ts01</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>ts02</servlet-name>
+    <url-pattern>/ts02</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ts03</servlet-name>
+    <url-pattern>/ts03</url-pattern>
   </servlet-mapping>
 </web-app>
