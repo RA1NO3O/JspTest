@@ -1,39 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>Dweb</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  <servlet>
-    <description></description>
-    <servlet-name>ts01</servlet-name>
-    <servlet-class>cn.itcast.chapter04.response.ChineseServlet</servlet-class>
-  </servlet>
-    <servlet>
-    <description></description>
-    <servlet-name>ts02</servlet-name>
-    <servlet-class>cn.itcast.chapter04.response.RefreshServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <description></description>
-    <servlet-name>ts03</servlet-name>
-    <servlet-class>cn.itcast.chapter04.response.LoginServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ts01</servlet-name>
-    <url-pattern>/ts01</url-pattern>
-  </servlet-mapping>
-    <servlet-mapping>
-    <servlet-name>ts02</servlet-name>
-    <url-pattern>/ts02</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>ts03</servlet-name>
-    <url-pattern>/ts03</url-pattern>
-  </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Dweb</display-name>
+	<welcome-file-list>
+		<welcome-file>login.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<description></description>
+		<servlet-name>ts01</servlet-name>
+		<servlet-class>cn.itcast.chapter04.response.ChineseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts01</servlet-name>
+		<url-pattern>/ts01</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<servlet-name>ts02</servlet-name>
+		<servlet-class>cn.itcast.chapter04.response.RefreshServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts02</servlet-name>
+		<url-pattern>/ts02</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<servlet-name>ts03</servlet-name>
+		<servlet-class>cn.itcast.chapter04.response.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts03</servlet-name>
+		<url-pattern>/ts03</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<servlet-name>ts04</servlet-name>
+		<servlet-class>cn.itcast.chapter04.response.DownManagerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts04</servlet-name>
+		<url-pattern>/ts04</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<servlet-name>ts05</servlet-name>
+		<servlet-class>cn.itcast.chapter04.response.RequestParamsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts05</servlet-name>
+		<url-pattern>/ts05</url-pattern>
+	</servlet-mapping>
 </web-app>
