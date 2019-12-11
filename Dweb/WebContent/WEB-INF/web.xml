@@ -13,6 +13,7 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 	
+	<!-- Dec4th -->
 	<servlet>
 		<description></description>
 		<servlet-name>ts01</servlet-name>
@@ -61,4 +62,35 @@
 		<servlet-name>ts05</servlet-name>
 		<url-pattern>/ts05</url-pattern>
 	</servlet-mapping>
+	
+	<!-- Dec10th -->
+	<filter>
+		<filter-name>AutoLoginFilter</filter-name>
+		<filter-class>cn.itcast.chapter08.filter.AutoLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AutoLoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<description></description>
+		<servlet-name>ts06</servlet-name>
+		<servlet-class>cn.itcast.chapter08.filter.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts06</servlet-name>
+		<url-pattern>/ts06</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<servlet-name>ts07</servlet-name>
+		<servlet-class>cn.itcast.chapter08.filter.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ts07</servlet-name>
+		<url-pattern>/ts07</url-pattern>
+	</servlet-mapping>
+	
 </web-app>
